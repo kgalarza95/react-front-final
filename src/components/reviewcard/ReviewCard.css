@@ -1,0 +1,54 @@
+/* === Card de reseña === */
+.review-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.review-card h3 {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.review-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 2px 0;
+}
+
+.review-card small {
+  color: var(--success-color);
+  font-weight: 500;
+  align-self: flex-end;
+}
+
+.review-card small.negativo {
+  color: var(--error-color);
+}
+
+/* Estilos específicos para puntuación */
+.review-card .puntuacion {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* Contenedor de detalles adicionales */
+.review-card .detalles {
+  display: flex;
+  gap: 15px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}

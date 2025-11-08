@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getReviews } from "../../services/reviewService";
 import ReviewCard from "../../components/reviewcard/ReviewCard";
-
+import "./Reviews.css";
 function Reviews() {
   const [reviews, setReviews] = useState([]);
 

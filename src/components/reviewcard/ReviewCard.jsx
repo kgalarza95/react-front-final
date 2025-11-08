@@ -1,3 +1,5 @@
+import "./ReviewCard.css";
+
 function ReviewCard({ review }) {
   return (
     <div className="review-card">
