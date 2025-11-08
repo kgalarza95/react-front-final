@@ -3,7 +3,8 @@ import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
 import Games from "./pages/games/Games";
 import AddGame from "./pages/addgame/AddGame";
-
+import Reviews from "./pages/reviews/Reviews";
+import AddReview from "./pages/addreview/AddReview";
 import "./App.css";
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/games" element={<Games />} />
           <Route path="/add-game" element={<AddGame />} />
+          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/add-review" element={<AddReview />} />
         </Routes>
       </main>
     </Router>

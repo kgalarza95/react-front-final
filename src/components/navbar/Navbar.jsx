@@ -15,6 +15,12 @@ function Navbar() {
         <li>
           <Link to="/add-game">Agregar</Link>
         </li>
+        <li>
+          <Link to="/reviews">Reseñas</Link>
+        </li>
+        <li>
+          <Link to="/add-review">Agregar Reseñas</Link>
+        </li>
       </ul>
     </nav>
   );
