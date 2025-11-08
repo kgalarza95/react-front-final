@@ -25,7 +25,7 @@ function AddGame() {
     e.preventDefault();
     try {
       await createGame(formData);
-      alert("✅ Videojuego agregado exitosamente!");
+      alert("Videojuego agregado exitosamente!");
       setFormData({
         titulo: "",
         genero: "",

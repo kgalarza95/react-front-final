@@ -13,7 +13,7 @@ function Navbar() {
           <Link to="/games">Videojuegos</Link>
         </li>
         <li>
-          <Link to="/add-game">Agregar</Link>
+          <Link to="/add-game">Agregar Juego</Link>
         </li>
         <li>
           <Link to="/reviews">Reseñas</Link>

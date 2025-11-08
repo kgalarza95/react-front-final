@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { createReview } from "../../services/reviewService";
-
+import "./AddReview.css";
 function AddReview() {
   const [formData, setFormData] = useState({
     juegoId: "",
@@ -23,7 +23,7 @@ function AddReview() {
     e.preventDefault();
     try {
       await createReview(formData);
-      alert("✅ Reseña agregada exitosamente!");
+      alert("Reseña agregada exitosamente!");
       setFormData({
         juegoId: "",
         puntuacion: 3,

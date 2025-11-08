@@ -19,6 +19,21 @@
   padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+/*
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+*/
 body {
   font-family: var(--font-main);
   background-color: var(--bg-color);
@@ -34,8 +49,16 @@ a {
 }
 
 /* === CONTENEDOR PRINCIPAL === */
+/*
 main.container {
   flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}*/
+
+main.container {
+  flex: 1 0 auto; /* permite crecer y empujar footer */
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -53,96 +76,4 @@ h4 {
 p {
   color: var(--text-muted);
   line-height: 1.6;
-}
-
-/* === BOTONES GENERALES === */
-.btn {
-  display: inline-block;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.1s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.btn-primary {
-  background: var(--accent-color);
-  color: white;
-}
-
-.btn-primary:hover {
-  background: var(--accent-hover);
-}
-
-.btn-success {
-  background: var(--success-color);
-  color: white;
-}
-
-.btn-error {
-  background: var(--error-color);
-  color: white;
-}
-
-/* === CARDS GENERALES === */
-.card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-}
-
-/* === INPUTS Y FORMULARIOS === */
-input,
-textarea,
-select {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  background-color: var(--bg-card);
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
-  outline: none;
-  font-size: 1rem;
-  transition: border-color 0.2s ease;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: var(--accent-color);
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-th,
-td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid var(--border-color);
-}
-
-th {
-  color: var(--accent-color);
-  font-weight: 600;
-}
-
-tr:hover {
-  background-color: rgba(88, 166, 255, 0.05);
 }

@@ -1,4 +1,3 @@
-// src/components/gamecard/GameCard.jsx
 import "./GameCard.css";
 
 function GameCard({ game }) {

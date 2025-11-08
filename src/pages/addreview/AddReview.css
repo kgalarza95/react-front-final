@@ -1,0 +1,13 @@
+
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: var(--bg-card);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
