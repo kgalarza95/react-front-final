@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { createGame } from "../../services/gameService";
 import "./AddGame.css";
+
 function AddGame() {
+  const API_URL = "http://localhost:4000/api/games";
+
   const [formData, setFormData] = useState({
     titulo: "",
     genero: "",
@@ -22,8 +25,34 @@ function AddGame() {
   };
 
   const handleSubmit = async (e) => {
+
     e.preventDefault();
     try {
+
+
+      fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+          alert("Videojuego agregado exitosamente!");
+          setFormData({
+            titulo: "",
+            genero: "",
+            plataforma: "",
+            añoLanzamiento: "",
+            desarrollador: "",
+            imagenPortada: "",
+            descripcion: "",
+            completado: false,
+          });
+        });
+
+      /*
+// Usando el servicio createGame
       await createGame(formData);
       alert("Videojuego agregado exitosamente!");
       setFormData({
@@ -36,11 +65,14 @@ function AddGame() {
         descripcion: "",
         completado: false,
       });
+    
+ */
     } catch (error) {
       console.error("Error al guardar el videojuego:", error);
       alert("Error al guardar el videojuego");
     }
   };
+
 
   return (
     <div>

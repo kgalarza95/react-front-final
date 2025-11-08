@@ -5,12 +5,19 @@ import GameCard from "../../components/gamecard/GameCard";
 function Games() {
   const [games, setGames] = useState([]);
 
+  const API_URL = "http://localhost:4000/api/games";
+
   useEffect(() => {
-    const fetchData = async () => {
+    /* const fetchData = async () => {
       const data = await getGames();
       setGames(data);
-    };
-    fetchData();
+    }; */
+
+    fetch(API_URL)
+      .then((resp) => resp.json())
+      .then((data) => setGames(data));
+
+    //fetchData();
   }, []);
 
   return (
