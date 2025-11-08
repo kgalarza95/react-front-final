@@ -1,0 +1,7 @@
+
+
+npm create vite@latest gametracker-front
+
+npm install
+npm run dev
+npm install react-router-dom
