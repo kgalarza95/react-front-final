@@ -3,13 +3,16 @@ import "./GameCard.css";
 function GameCard({ game }) {
   return (
     <div className="game-card">
-      <img
-        className="game-cover"
-        src={
-          game.imagenPortada ||
-          "https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
-        }
-        alt={game.titulo}
+      <div
+        className="game-cover-bg"
+        style={{
+          backgroundImage: `url(${
+            game.imagenPortada ||
+            "https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
+          })`,
+        }}
+        role="img"
+        aria-label={game.titulo}
       />
       <div className="game-details">
         <h3>{game.titulo}</h3>

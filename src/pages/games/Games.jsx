@@ -28,7 +28,10 @@ function Games() {
       ) : (
         <div className="games-grid">
           {games.map((game) => (
+
             <GameCard key={game._id} game={game} />
+
+            
           ))}
         </div>
       )}
